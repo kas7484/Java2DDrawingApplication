@@ -1,0 +1,37 @@
+Java 2D Drawing Application
+
+This is a Java 2D Drawing Application example that allows users to draw lines, ovals, and rectangles on a JPanel. The application has the following features:
+
+A combo box for selecting the shape to draw: a line, oval, or rectangle.
+Two JButtons that each show a JColorChooser dialog to allow the user to choose the first and second color in the gradient.
+An Undo button to undo the last shape drawn.
+A Clear button to clear all shapes from the drawing.
+A checkbox that specifies if the shape should be filled or unfilled.
+A checkbox to specify whether to paint using a gradient.
+A checkbox for specifying whether to draw a dashed or solid line.
+A JSpinner for entering the Stroke width.
+A JSpinner for entering the Stroke dash length.
+A JPanel on which the shapes are drawn.
+A status bar JLabel at the bottom of the frame that displays the current location of the mouse on the draw panel.
+Note that the application uses the provided MyShapes class hierarchy for drawing shapes. The application allows users to choose between drawing with a solid color or a gradient of two colors. Users can also choose whether to draw a dashed or solid line, and specify the width and dash length of the stroke.
+
+Getting Started
+
+To use the application, simply run the main method in the Java2DDrawingApplication class. The application will launch and display the user interface.
+
+Usage
+
+Select the shape you want to draw from the combo box.
+Choose the first and second color in the gradient by clicking the JColorChooser buttons.
+Specify whether the shape should be filled or unfilled by checking the appropriate checkbox.
+Specify whether to paint using a gradient or a solid color by checking the appropriate checkbox.
+Specify whether to draw a dashed or solid line by checking the appropriate checkbox.
+Enter the Stroke width and dash length using the JSpinners.
+Click and drag on the DrawPanel to create a new shape.
+Click the Undo button to undo the last shape drawn.
+Click the Clear button to clear all shapes from the drawing.
+Implementation Details
+
+In the paintComponent(Graphics g) method of the DrawPanel, the application loops through an ArrayList of MyShapes to draw each shape created by the user. The draw(Graphics2D g2d) method is called for each shape, which is already implemented in the MyShapes hierarchy.
+
+Note that event handlers are only required for the buttons. The values from the other components in the GUI can be obtained when the user clicks on the DrawPanel to create a new shape.
